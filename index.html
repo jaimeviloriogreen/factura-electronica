@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura Electrónica</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <script type="module" src="./app.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <main class="main">
+        <section class="products">
+            <!-- Formulario para ingresar productos -->
+            <article class="products__form product__form--display">
+                <form class="form" autocomplete="off">
+                    <input class="form__input" type="text" name="producto" class="Producto" placeholder="Producto">
+                    <input class="form__input" type="number" name="precio" step="any" placeholder="Precio">
+                    <input class="form__input" type="number" name="cantidad" placeholder="Cantidad">
+                    <fieldset class="form__buttons">
+                        <button class="form__btn form__btn--cancelar" type="button">Cancelar</button>
+                        <button class="form__btn form__btn--insertar" data-do="insertar" type="submit">Insertar</button>
+                    </fieldset>
+                </form>
+            </article>
+            <!--  -->
+            <article class="products__container products__container--button">
+                <button class="products__btn">Agregar</button>
+            </article>
+            <article class="products__container products__container--icon">
+                <img class="products__icon" src="./icons/shoping_bag.svg" alt="shopping-bag">
+                <p class="products__text">¡Nigún producto ha sido encontrado!</p>
+            </article>
+
+            <article class="products__container products__container--table products__container--display">
+                <table class="table">
+                    <thead class="table__thead">
+                        <tr class="table__trow">
+                            <th class="table__theading">Producto</th>
+                            <th class="table__theading">Precio</th>
+                            <th class="table__theading">Cantidad</th>
+                            <th class="table__theading">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table__tbody"></tbody>
+                </table>
+            </article> 
+        </section>
+
+        <section class="bill">
+            <h2 class="bill__total total">
+                <span class="total__mount">
+                    <span class="total__coin">RD$</span>
+                    <span class="total__value">0.00</span>
+                </span>
+                    
+                <span class="total__desc">Total a pagar</span>
+            </h2>
+            <h3 class="bill__itbis itbis">
+                <span class="itbis__span itbis__span--desc">ITBIS(%):</span>
+                <span class="itbis__span itbis__span--mount">RD$ 0.00</span>
+            </h3>
+            <h3 class="bill__subtotal subtotal">
+                <span class="subtotal__span subtotal__span--desc">Subtotal:</span>
+                <span class="subtotal__span subtotal__span--mount">RD$ 0.00</span>
+            </h3>            
+            <button class="bill__btn">Realizar Pago</button>
+        </section>
+    </main>
+</body>
+</html>
