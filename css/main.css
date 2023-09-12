@@ -131,6 +131,7 @@
     font-weight: 700;
     color: #aaa;
     letter-spacing: var(--letter-spacing);
+    text-align: center;
 }
 .products__container--table{
     /* height: 70vh; */
@@ -262,6 +263,9 @@
 @media screen and (max-width:576px){
     html{font-size: 12px}
     .total__mount {font-size: 4rem;}
+    .bill{
+        overflow-x: scroll;
+    }
 }
 
 
