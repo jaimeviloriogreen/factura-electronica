@@ -125,6 +125,7 @@
     border: 6px dotted #ccc;
     /* height: 50vh; */
     justify-content: center;
+    padding: 1rem;
 }
 .products__text{
     font-size: 1.25rem;
